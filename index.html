@@ -13,10 +13,42 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div class="maincube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
         
         <script src="" async defer></script>
     </body>
 </html>
+
+<style>
+
+
+.maincube{
+    width: 150px;
+    height: 150px;
+    position: relative;
+
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+
+.cube-face{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background: red;
+    opacity: 0.5;
+
+}
+
+.cube-face-front{
+    color: blue;
+    transform: translate3d(0, 0, 20px);
+}
+</style>
